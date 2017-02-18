@@ -9,13 +9,7 @@ import {Router} from "@angular/router";
 })
 export class RegisterComponent implements OnInit {
 
-  user = {
-    username: 'ireoluwa',
-    name: 'Ire Aderinokun',
-    email: 'ire@ireaderinokun.com',
-    password: 'password',
-    passwordConfirmation: 'password'
-  };
+  user = {};
 
   constructor(
     private authService: AuthService,
@@ -25,10 +19,7 @@ export class RegisterComponent implements OnInit {
   registerUser() {
     console.log(this.user);
     this.authService.register(this.user)
-      .then((res) => {
-        console.log("success", res)
-        this.router.navigate(['/']);
-      })
+      .then((res) => this.router.navigate(['/']))
       .catch((err) => {
         console.log("error", err);
       })

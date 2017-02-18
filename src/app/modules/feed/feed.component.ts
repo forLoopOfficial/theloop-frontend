@@ -17,7 +17,6 @@ export class FeedComponent implements OnInit {
     private postsService:PostsService
   ) { }
 
-
   calculateCharactersLeft() {
     this.characters = 140 - this.newPost.length;
   }

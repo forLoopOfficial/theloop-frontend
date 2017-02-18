@@ -10,10 +10,7 @@ import {Router} from "@angular/router";
 export class LoginComponent implements OnInit {
 
 
-  user = {
-    email: "ire@ireaderinokun.com",
-    password: "password"
-  }
+  user = { }
 
   constructor(
     private authService: AuthService,
@@ -21,15 +18,8 @@ export class LoginComponent implements OnInit {
   ) { }
 
   loginUser() {
-    console.log(this.user)
     this.authService.login(this.user)
-      .then((res:any) => {
-        console.log(res);
-        this.router.navigate(['/']);
-      })
-      .catch(() => {
-        console.log("error");
-      })
+      .then((res:any) => this.router.navigate(['/']))
   }
 
   ngOnInit() {

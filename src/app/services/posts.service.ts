@@ -1,41 +1,12 @@
 import { Injectable } from '@angular/core';
-import {Http} from "@angular/http";
 import {Angular2TokenService} from "angular2-token/angular2-token";
 
 import 'rxjs/add/operator/map';
-
-const dummyPosts = [
-  {
-    author: {
-      fullName: 'Ire Aderinokun',
-      username: 'iaderinokun',
-    },
-    likes: 12,
-    content: 'Lorem ipsum dolor sit amet'
-  },
-  {
-    author: {
-      fullName: 'Timi Ajiboye',
-      username: 'timigod',
-    },
-    likes: 1,
-    content: 'Lorem ipsum dolor sit amet'
-  },
-  {
-    author: {
-      fullName: 'Ire Aderinokun',
-      username: 'iaderinokun',
-    },
-    likes: 122,
-    content: 'Lorem ipsum dolor sit amet'
-  }
-];
 
 @Injectable()
 export class PostsService {
 
   constructor(
-    private http: Http,
     private _tokenService: Angular2TokenService
   ) {
   }

@@ -33,10 +33,8 @@ export class AuthService {
 
   validateToken() {
     return new Promise((resolve, reject) => {
-      this._tokenService.validateToken().subscribe(
-        res =>      resolve(res),
-        error =>    reject(error)
-      );
+      this._tokenService.validateToken()
+        .subscribe(res => resolve(res), error => reject(error));
     })
   }
 

@@ -20,13 +20,7 @@ export class UserComponent implements OnInit {
 
   ngOnInit() {
     this.authService.validateToken()
-      .then((res:any) => {
-        this.user = JSON.parse(res._body).data
-        console.log(this.user);
-      })
-      .catch(() => {
-        console.log("err");
-      })
+      .then((res:any) => this.user = JSON.parse(res._body).data)
   }
 
 }
