@@ -12,11 +12,11 @@ import { HeaderComponent } from './modules/header/header.component';
 import { UserComponent } from './modules/user/user.component';
 import { FeedComponent } from './modules/feed/feed.component';
 import { PostComponent } from './modules/post/post.component';
-import { TrendingComponent } from './modules/trending/trending.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { AuthService } from "./services/auth.service";
 import { PostsService } from "./services/posts.service";
+import { AboutComponent } from './modules/about/about.component';
 
 @NgModule({
   declarations: [
@@ -26,9 +26,9 @@ import { PostsService } from "./services/posts.service";
     UserComponent,
     FeedComponent,
     PostComponent,
-    TrendingComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
