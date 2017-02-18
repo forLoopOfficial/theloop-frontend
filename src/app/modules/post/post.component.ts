@@ -17,9 +17,7 @@ export class PostComponent implements OnInit {
   likePost() {
     this.postsService.likePost(this.post.id)
       .then((res:any) => {
-        const updatedPost = res.post;
-        updatedPost.user = res.user;
-        this.post = updatedPost;
+        this.post.likes_count = res.post.likes_count;
       })
   }
 
