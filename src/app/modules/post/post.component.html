@@ -1,9 +1,9 @@
 <article class="post">
   <header class="post__header">
     <div class="post__author">
-      <span class="post__author__fullname">{{ post.user.name }}</span>
+      <span class="post__author__fullname">Ire Aderinokun</span>
     </div>
-    <button class="post__likes text-colour-muted" type="button" (click)="likePost()">
+    <button class="post__likes text-colour-muted" type="button">
       <svg class="post__likes__heart" width="11px" height="10px" viewBox="0 0 11 10">
         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <g transform="translate(-975.000000, -236.000000)" class="fill" fill="#757997">
@@ -17,10 +17,10 @@
           </g>
         </g>
       </svg>
-      <span class="post__likes__count">{{ post.likes_count || 0 }}</span>
+      <span class="post__likes__count">12</span>
     </button>
   </header>
   <div class="post__content">
-    {{ post.body }}
+    Lorem ipsum dolor sit amet
   </div>
 </article>

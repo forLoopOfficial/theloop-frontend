@@ -8,19 +8,9 @@ import {AuthService} from "../../services/auth.service";
 })
 export class UserComponent implements OnInit {
 
-  user = {};
-
-  constructor(
-    private authService: AuthService
-  ) { }
-
-  logout() {
-    this.authService.logout();
-  }
+  constructor() { }
 
   ngOnInit() {
-    this.authService.validateToken()
-      .then((res:any) => this.user = JSON.parse(res._body).data)
   }
 
 }

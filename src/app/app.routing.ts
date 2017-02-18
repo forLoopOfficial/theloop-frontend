@@ -7,8 +7,7 @@ import {Angular2TokenService} from "angular2-token/angular2-token";
 const appRoutes: Routes = [
   {
     path: '',
-    component: HomeComponent,
-    canActivate: [Angular2TokenService]
+    component: HomeComponent
   },
   {
     path: 'login',

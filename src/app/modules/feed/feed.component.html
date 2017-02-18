@@ -1,18 +1,21 @@
-<form (submit)="createPost()" class="card new-post-form">
+<form class="card new-post-form">
   <label for="new_post" class="new-post-form__label text-colour-theme">Post a new message</label>
   <div class="input-group">
-    <input type="text" id="new_post" name="new_post" [(ngModel)]="newPost" (keyup)="calculateCharactersLeft()"
+    <input type="text" id="new_post" name="new_post"
            class="new-post-form__input" placeholder="What's happening?">
-    <button type="submit" class="new-post-form__submit" [disabled]="characters < 0 || characters > 138">
+    <button type="submit" class="new-post-form__submit">
       <img src="assets/images/new-post-submit-icon.png" alt="">
       Post
     </button>
   </div>
-  <small *ngIf="newPost" class="new-post-form__characters">{{ characters }} left</small>
+  <small class="new-post-form__characters">140 characters left</small>
 </form>
 
 <ul class="posts card">
-  <li *ngFor="let post of posts">
-    <app-post [post]="post"></app-post>
+  <li>
+    <app-post></app-post>
+    <app-post></app-post>
+    <app-post></app-post>
+    <app-post></app-post>
   </li>
 </ul>
