@@ -1,0 +1,14 @@
+<section class="card trending">
+  <header class="card__header">
+    <h2 class="card__title">Trending</h2>
+  </header>
+  <ul class="card__body trending-tags">
+    <li *ngFor="let hashtag of trendingHashtags" class="trending-tag">
+      <img class="trending-tag__icon" src="assets/images/trending.png" alt="">
+      <div class="trending-tag__details">
+        <p class="trending-tag__tag text-colour-theme">#{{hashtag.name}}</p>
+        <p class="trending-tag__number text-colour-muted">{{hashtag.posts}} posts</p>
+      </div>
+    </li>
+  </ul>
+</section>

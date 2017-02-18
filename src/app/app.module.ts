@@ -3,16 +3,20 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { Angular2TokenService } from 'angular2-token';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './views/home/home.component';
-import {AppRouting} from "./app.routing";
-import { HeaderComponent } from './components/header/header.component';
-import { UserComponent } from './components/user/user.component';
-import { FeedComponent } from './components/feed/feed.component';
-import { PostComponent } from './components/post/post.component';
-import { TrendingComponent } from './components/trending/trending.component';
+import { AppRouting } from "./app.routing";
+import { HeaderComponent } from './modules/header/header.component';
+import { UserComponent } from './modules/user/user.component';
+import { FeedComponent } from './modules/feed/feed.component';
+import { PostComponent } from './modules/post/post.component';
+import { TrendingComponent } from './modules/trending/trending.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
+import { AuthService } from "./services/auth.service";
+import { PostsService } from "./services/posts.service";
 
 @NgModule({
   declarations: [
@@ -32,7 +36,11 @@ import { RegisterComponent } from './views/register/register.component';
     HttpModule,
     AppRouting
   ],
-  providers: [],
+  providers: [
+    Angular2TokenService,
+    AuthService,
+    PostsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

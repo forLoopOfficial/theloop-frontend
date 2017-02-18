@@ -1,0 +1,16 @@
+<div class="user">
+  <header class="user__header">
+    <p class="user__fullname">{{ user.name }}</p>
+    <a routerLink="/login" (click)="logout()" class="user__logout text-colour-muted"><img src="assets/images/logout.png" alt=""> Logout</a>
+  </header>
+  <ul class="user__stats">
+    <li class="user__stat">
+      <span class="user__stat__number text-colour-theme">{{ user.posts_count || 0 }}</span>
+      <span class="user__stat__label text-colour-muted">Posts</span>
+    </li>
+    <li class="user__stat">
+      <span class="user__stat__number text-colour-theme">{{ user.likes_count || 0 }}</span>
+      <span class="user__stat__label text-colour-muted">Likes</span>
+    </li>
+  </ul>
+</div>
